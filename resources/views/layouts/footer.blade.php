@@ -59,7 +59,6 @@
                 <li class="pb-1">
                     <a href="/">Why we love Tech</a>
                 </li>
-
                 <li class="pb-1">
                     <a href="/">Why we love Design</a>
                 </li>

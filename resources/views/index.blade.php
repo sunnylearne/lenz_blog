@@ -25,14 +25,16 @@
             </h2>
 
             <p class="py-8 text-gray-500 text-l">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui cum veniam aliquid molestias tempora,
-                incidunt officia veritatis officiis excepturi odio ratione eius libero eaque minus ullam, a optio! Dolorum, non?
+                Below are some articles which are my personal experince
+                in the Web development journey and i think you will find 
+                them handy too.
             </p>
 
             <p class="font-extrabold text-gray-600 text-s pb-9">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non rem, unde ratione
-                sequi architecto tenetur libero est sapiente dolores rerum ad iste repellendus deleniti! Enim, 
-                architecto ut. Assumenda, alias accusamus?
+                Several years ago, i was like you,naive,confused and intimidated
+                by numerous languages and getting started as a developer.
+                But yours is different now,because you have this blog as a guide.
+                You could change your world by just clicking below...
             </p>
 
             <a href="/blog" class="uppercase bg-blue-500 text-gray-100 text-s font-extrabold py-3 px-8 rounded-3xl">
@@ -47,15 +49,15 @@
         </h2>
 
         <span class="font-extrabold block text-4xl py-1">
-            Ux Design
+            Front End Development
         </span>
 
         <span class="font-extrabold block text-4xl py-1">
-            Project Management
+            Photography
         </span>
 
         <span class="font-extrabold block text-4xl py-1">
-            Digital Strategy
+            Cinematography
         </span>
 
         <span class="font-extrabold block text-4xl py-1">
@@ -73,10 +75,8 @@
         </h2>
 
         <p class="m-auto w-4/5 text-gray-500">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-            Amet pariatur minus cum incidunt, reiciendis perspiciatis 
-            possimus consequatur odio praesentium sunt eius, consectetur 
-            libero doloremque cumque ut iure, impedit saepe. Deleniti?
+            Listed below are latest blog posts as at the time of your visit. You can consume them now that they are still hot.
+
         </p>
     </div>
     
@@ -84,22 +84,19 @@
         <div class="flex bg-yellow-700 text-gray-100 pt-10">
             <div class="m-auto pt-4 pb-16 sm:m-auto w-4/5 block">
                 <span class="uppeercase text-xs">
-                    PHP
+                    {{ $latest_posts->title}}
                 </span>
                 <h3 class="text-xl font-bold py-10">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    At porro natus aliquid, iste accusantium neque voluptatum omnis. 
-                    Laudantium beatae expedita ullam architecto tempora tenetur placeat, 
-                    molestiae autem corporis nisi voluptate.
+                {{ substr($latest_posts->description, 0, 100)}}...
                 </h3>
-                <a href="" class="uppercase bg-transparent border-2 border-gray-100 text-gray-100 text-xs font-extrabold py-3 px-5 rounded-3xl">
+                <a href="/blog/{{$latest_posts->slug}}" class="uppercase bg-transparent border-2 border-gray-100 text-gray-100 text-xs font-extrabold py-3 px-5 rounded-3xl">
                     Find out more  
                 </a>
             </div>
         </div>
 
         <div>
-            <img src="https://cdn.pixabay.com/photo/2014/05/03/01/03/laptop-336704_1280.jpg" width="700" alt="">
+            <img src="{{ asset('images/' . $latest_posts->image_path)}}" width="700" alt="">
         </div>
     </div>
 

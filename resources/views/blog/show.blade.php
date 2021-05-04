@@ -4,16 +4,16 @@
 
 <div class="m-auto text-left w-4/5">
     <div class="py-15">
-        <h1 class="text-6xl">
+        <h1 class="text-4xl">
             {{ $post->title}}
         </h1>
     </div>
 </div>
 
 <div class="m-auto pt-20 w-4/5">
-    <div class="relative h-80 m-8 overflow-hidden rounded-lg bg-indigo-500">
+    <div >
         
-        <img src="{{ asset('images/' . $post->image_path) }}" class="object-cover min-w-full h-full" alt="" srcset="">
+        <img src="{{ asset('images/' . $post->image_path) }}"  alt="" srcset="">
         
     </div>
     <span class="text-gray-500">

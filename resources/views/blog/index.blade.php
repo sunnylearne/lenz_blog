@@ -12,7 +12,7 @@
 
 @if(session()->has('message'))
     <div class="w-4/5 m-auto mt-10 pl-2">
-        <p class="w-2/5 mb-4 text-gray-50 bg-green-500 rounded-2xl py-4">
+        <p class="w-2/5 mb-4 text-gray-50 bg-green-500 rounded-2xl py-4 text-center">
             {{ session()->get('message') }}
         </p>
     </div>
@@ -38,7 +38,8 @@
             </h2>
 
             <span class="text-gray-500">
-                By <span class="font-bold italic text-gray-800">{{ $post->user->name}}</span> Created on {{ $post->created_at->diffForHumans()}}
+                Created {{ $post->created_at->diffForHumans()}} 
+                <span class="font-bold italic text-gray-800"> by {{ $post->user->name}}</span> 
             </span>
 
             <p class="text-xl text-gray-700 pt-8 pb-10 leading-8 font-light">
