@@ -32,7 +32,7 @@
                     <span class="mt-2 text-base leading-normal">
                         Select a file
                     </span>
-                    <input type="file" name="image"  class="">
+                    <input type="file" name="image" class="opacity-0">
                 </label>
             </div>
 
